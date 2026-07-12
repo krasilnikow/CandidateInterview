@@ -8,7 +8,7 @@ const Task100 = lazy(() => import('./tasks/task100/Task100'));
 
 const App = () => {
   return (
-    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}  basename={import.meta.env.BASE_URL}>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         <main style={{ flex: 1 }}>
           <Suspense fallback={<div style={{ padding: '20px' }}></div>}>
