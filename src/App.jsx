@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 
 const Task1 = lazy(() => import('./tasks/task1/Task1'));
 const Task2 = lazy(() => import('./tasks/task2/Task2'));
