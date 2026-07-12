@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 
 const Task1 = lazy(() => import('./tasks/task1/Task1'));
 const Task2 = lazy(() => import('./tasks/task2/Task2'));
+const Task100 = lazy(() => import('./tasks/task100/Task100'));
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
               <Route path="/" element={<Navigate to="/task1" replace />} />
               <Route path="/task1" element={<Task1 />} />
               <Route path="/task2" element={<Task2 />} />
+              <Route path="/task100" element={<Task100 />} />
               <Route path="*" element={<div style={{ padding: '20px' }}>Страница не найдена</div>} />
             </Routes>
           </Suspense>
