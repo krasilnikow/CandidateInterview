@@ -6,5 +6,6 @@ export default defineConfig({
     minify: false,
     sourcemap: true,
   },
+  base: "/CandidateInterview/",
   plugins: [react()],
 })
