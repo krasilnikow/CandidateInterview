@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 const SyncProcessor = ({ value }) => {
   useMemo(() => {
     const start = Date.now();
-    while (Date.now() - start < 200000) {
+    while (Date.now() - start < 20000000) {
     }
   }, [value]);
   
