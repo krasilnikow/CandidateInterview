@@ -1,12 +1,13 @@
-import React, { useMemo } from 'react';
+import { memo } from 'react';
 
 const Bootstrap = () => {
-  useMemo(() => {
-    const start = Date.now();
-    while (Date.now() - start < 5000) {}
-  }, []);
+  const start = Date.now();
+  let i = 0;
+  while (Date.now() - start < 5000) {
+    i += Math.random();
+  }
   
   return null;
 };
 
-export default Bootstrap;
+export default memo(Bootstrap);
