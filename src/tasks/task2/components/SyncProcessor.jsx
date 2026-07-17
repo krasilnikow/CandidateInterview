@@ -6,7 +6,9 @@ const SyncProcessor = ({ value }) => {
       const start = performance.now();
       let i = 0;
       while (performance.now() - start < 1000) {
-        i = (i + 1) * 31 % 100000;
+        for (let j = 0; j < 1000000; j++) {
+          i = (i + j) * 31 % 100000;
+        }
       }
     }
   }, [value]);
