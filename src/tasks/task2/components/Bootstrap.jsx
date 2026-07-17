@@ -1,10 +1,12 @@
 import { memo } from 'react';
 
 const Bootstrap = () => {
-  const start = Date.now();
+  const start = performance.now();
   let i = 0;
-  while (Date.now() - start < 5000) {
-    i += Math.random();
+  while (performance.now() - start < 5000) {
+    for (let j = 0; j < 1000000; j++) {
+      i = (i + j) * 31 % 100000;
+    }
   }
   
   return null;

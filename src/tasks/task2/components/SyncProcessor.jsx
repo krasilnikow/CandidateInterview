@@ -3,10 +3,10 @@ import { useMemo } from 'react';
 const SyncProcessor = ({ value }) => {
   useMemo(() => {
     if (value) {
-      const start = Date.now();
+      const start = performance.now();
       let i = 0;
-      while (Date.now() - start < 1000) {
-        i += Math.random();
+      while (performance.now() - start < 1000) {
+        i = (i + 1) * 31 % 100000;
       }
     }
   }, [value]);
